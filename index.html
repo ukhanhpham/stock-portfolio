@@ -10,12 +10,18 @@
 
     <meta
         name="description"
-        content="Stock portfolio featuring independent equity research, valuation, and investment analysis."
+        content="Independent equity research portfolio featuring recommendations, valuation, and full research reports."
     >
 
     <title>Stock Portfolio | Equity Research</title>
 
     <link rel="stylesheet" href="styles.css">
+
+    <!-- TradingView ticker component -->
+    <script
+        type="module"
+        src="https://widgets.tradingview-widget.com/w/en/tv-tickers.js"
+    ></script>
 </head>
 
 <body>
@@ -27,113 +33,80 @@
 
             <div class="nav-links">
                 <a href="#coverage">Research</a>
-                <a href="#about">About</a>
+                <a href="#methodology">Methodology</a>
                 <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero section -->
         <section class="hero">
             <div class="container hero-content">
                 <p class="eyebrow">
                     Independent Equity Research
                 </p>
 
-                <h1>
-                    Stock Portfolio
-                </h1>
+                <h1>Stock Portfolio</h1>
 
                 <p class="hero-description">
-                    A collection of public-company research reports,
-                    financial models, valuation analyses, investment
-                    theses, catalysts, and risks.
+                    Public-company research featuring recommendations,
+                    financial modeling, valuation, catalysts, risks,
+                    and complete equity research reports.
                 </p>
 
                 <div class="hero-tags">
                     <span>DCF Valuation</span>
                     <span>Comparable Companies</span>
-                    <span>Financial Modeling</span>
+                    <span>Scenario Analysis</span>
                     <span>Investment Research</span>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio statistics -->
         <section class="statistics">
             <div class="container statistics-grid">
                 <div class="stat-card">
                     <p class="stat-number">2</p>
-                    <p class="stat-label">
-                        Companies Covered
-                    </p>
+                    <p class="stat-label">Companies Covered</p>
                 </div>
 
                 <div class="stat-card">
                     <p class="stat-number">2</p>
-                    <p class="stat-label">
-                        Sectors Covered
-                    </p>
-                </div>
-
-                <div class="stat-card">
-                    <p class="stat-number">+58%</p>
-                    <p class="stat-label">
-                        Highest Initial Upside
-                    </p>
+                    <p class="stat-label">Sectors Covered</p>
                 </div>
 
                 <div class="stat-card">
                     <p class="stat-number">2</p>
-                    <p class="stat-label">
-                        Long Recommendations
-                    </p>
+                    <p class="stat-label">Buy Recommendations</p>
+                </div>
+
+                <div class="stat-card">
+                    <p class="stat-number">58%</p>
+                    <p class="stat-label">Highest Initial Upside</p>
                 </div>
             </div>
         </section>
 
-        <!-- Research dashboard -->
         <section id="coverage" class="coverage-section">
             <div class="container">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">
-                            Coverage Universe
-                        </p>
-
-                        <h2>
-                            Equity Research
-                        </h2>
+                        <p class="eyebrow">Coverage Universe</p>
+                        <h2>Equity Research</h2>
                     </div>
 
-                    <div class="section-heading-copy">
-                        <p class="section-description">
-                            Select a company to view the investment thesis,
-                            valuation summary, key risks, and full report.
-                        </p>
-
-                        <p
-                            class="market-update"
-                            id="market-update-time"
-                        >
-                            Loading market data...
-                        </p>
-                    </div>
+                    <p class="section-description">
+                        Select a company to view its investment thesis,
+                        recommendation, valuation, risks, and full report.
+                    </p>
                 </div>
 
                 <div class="research-grid">
                     <!-- AMG card -->
-                    <a
-                        class="research-card"
-                        href="reports/amg.html"
-                        aria-label="View Affiliated Managers Group report"
-                    >
+                    <article class="research-card">
                         <div class="card-top">
                             <div class="company-identity">
-                                <div class="ticker-box">
-                                    AMG
-                                </div>
+                                <div class="ticker-box">AMG</div>
 
                                 <div>
                                     <p class="company-name">
@@ -141,103 +114,112 @@
                                     </p>
 
                                     <p class="company-sector">
-                                        Financials · Asset Management
+                                        NYSE: AMG · Asset Management
                                     </p>
                                 </div>
                             </div>
 
-                            <span class="rating buy">
-                                LONG
-                            </span>
+                            <span class="rating buy">BUY</span>
+                        </div>
+
+                        <div class="live-widget-section">
+                            <p class="label">Current Market Price</p>
+
+                            <div class="tradingview-box">
+                                <tv-tickers
+                                    symbols="NYSE:AMG"
+                                    direction="horizontal"
+                                    hide-chart
+                                    item-size="compact"
+                                    color-theme="light"
+                                ></tv-tickers>
+                            </div>
+
+                            <p class="market-note">
+                                Market data supplied by TradingView and may
+                                be delayed.
+                            </p>
+                        </div>
+
+                        <div class="recommendation-row">
+                            <div>
+                                <p class="label">Recommendation</p>
+                                <p class="recommendation-value">BUY</p>
+                            </div>
+
+                            <div>
+                                <p class="label">Report Date</p>
+                                <p class="recommendation-detail">
+                                    May 15, 2026
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="label">Time Horizon</p>
+                                <p class="recommendation-detail">
+                                    Long term
+                                </p>
+                            </div>
                         </div>
 
                         <div class="card-thesis">
-                            <p class="label">
-                                Investment View
-                            </p>
+                            <p class="label">Investment Thesis</p>
 
                             <p>
-                                AMG's affiliate structure, expansion in
-                                alternative assets, and diversified earnings
-                                base support a favorable long-term outlook.
+                                AMG’s affiliate structure, hidden growth in
+                                equity-method affiliates, expanding exposure
+                                to alternative assets, and diversified
+                                earnings base support a favorable long-term
+                                outlook.
                             </p>
                         </div>
 
-                        <div class="valuation-grid valuation-grid-four">
-                            <div>
-                                <p class="label">
-                                    Pitched Price
-                                </p>
-
-                                <p class="metric">
-                                    $293.91
-                                </p>
+                        <div class="valuation-grid">
+                            <div class="valuation-item">
+                                <p class="label">Pitched Price</p>
+                                <p class="metric">$293.91</p>
                             </div>
 
-                            <div>
-                                <p class="label">
-                                    Live Price
-                                </p>
-
-                                <p
-                                    class="metric"
-                                    id="amg-live-price"
-                                >
-                                    Loading...
-                                </p>
-
-                                <p
-                                    class="live-change"
-                                    id="amg-live-change"
-                                ></p>
+                            <div class="valuation-item">
+                                <p class="label">Target Price</p>
+                                <p class="metric">$465.77</p>
                             </div>
 
-                            <div>
+                            <div class="valuation-item">
                                 <p class="label">
-                                    Target Price
+                                    Target Upside at Publication
                                 </p>
 
-                                <p class="metric">
-                                    $465.77
-                                </p>
-                            </div>
-
-                            <div>
-                                <p class="label">
-                                    Live Upside
-                                </p>
-
-                                <p
-                                    class="metric positive"
-                                    id="amg-live-upside"
-                                >
-                                    Loading...
+                                <p class="metric positive">
+                                    +58.00%
                                 </p>
                             </div>
                         </div>
 
-                        <div class="card-footer">
-                            <span>
-                                Published May 15, 2026
-                            </span>
+                        <div class="card-actions">
+                            <a
+                                class="primary-button"
+                                href="reports/amg.html"
+                            >
+                                View Full Report
+                            </a>
 
-                            <span class="view-report">
-                                View Report →
-                            </span>
+                            <a
+                                class="secondary-button"
+                                href="pdfs/AMG_Stock_Pitch.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Open PDF
+                            </a>
                         </div>
-                    </a>
+                    </article>
 
                     <!-- Innoviva card -->
-                    <a
-                        class="research-card"
-                        href="reports/innoviva.html"
-                        aria-label="View Innoviva report"
-                    >
+                    <article class="research-card">
                         <div class="card-top">
                             <div class="company-identity">
-                                <div class="ticker-box">
-                                    INVA
-                                </div>
+                                <div class="ticker-box">INVA</div>
 
                                 <div>
                                     <p class="company-name">
@@ -245,125 +227,134 @@
                                     </p>
 
                                     <p class="company-sector">
-                                        Healthcare · Pharmaceuticals
+                                        NasdaqGS: INVA · Pharmaceuticals
                                     </p>
                                 </div>
                             </div>
 
-                            <span class="rating buy">
-                                LONG
-                            </span>
+                            <span class="rating buy">BUY</span>
+                        </div>
+
+                        <div class="live-widget-section">
+                            <p class="label">Current Market Price</p>
+
+                            <div class="tradingview-box">
+                                <tv-tickers
+                                    symbols="NASDAQ:INVA"
+                                    direction="horizontal"
+                                    hide-chart
+                                    item-size="compact"
+                                    color-theme="light"
+                                ></tv-tickers>
+                            </div>
+
+                            <p class="market-note">
+                                Market data supplied by TradingView and may
+                                be delayed.
+                            </p>
+                        </div>
+
+                        <div class="recommendation-row">
+                            <div>
+                                <p class="label">Recommendation</p>
+                                <p class="recommendation-value">BUY</p>
+                            </div>
+
+                            <div>
+                                <p class="label">Report Date</p>
+                                <p class="recommendation-detail">
+                                    June 18, 2026
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="label">Time Horizon</p>
+                                <p class="recommendation-detail">
+                                    3 years
+                                </p>
+                            </div>
                         </div>
 
                         <div class="card-thesis">
-                            <p class="label">
-                                Investment View
-                            </p>
+                            <p class="label">Investment Thesis</p>
 
                             <p>
-                                Innoviva combines recurring royalty income,
-                                infectious-disease growth, international
-                                expansion, and strategic healthcare assets.
+                                Innoviva combines respiratory royalty income,
+                                infectious-disease product growth, global
+                                expansion, the LYNX drug-delivery platform,
+                                and a diversified healthcare asset portfolio.
                             </p>
                         </div>
 
-                        <div class="valuation-grid valuation-grid-four">
-                            <div>
-                                <p class="label">
-                                    Pitched Price
-                                </p>
-
-                                <p class="metric">
-                                    $22.49
-                                </p>
+                        <div class="valuation-grid">
+                            <div class="valuation-item">
+                                <p class="label">Pitched Price</p>
+                                <p class="metric">$22.49</p>
                             </div>
 
-                            <div>
-                                <p class="label">
-                                    Live Price
-                                </p>
-
-                                <p
-                                    class="metric"
-                                    id="inva-live-price"
-                                >
-                                    Loading...
-                                </p>
-
-                                <p
-                                    class="live-change"
-                                    id="inva-live-change"
-                                ></p>
+                            <div class="valuation-item">
+                                <p class="label">Target Price</p>
+                                <p class="metric">$33.98</p>
                             </div>
 
-                            <div>
+                            <div class="valuation-item">
                                 <p class="label">
-                                    Target Price
+                                    Target Upside at Publication
                                 </p>
 
-                                <p class="metric">
-                                    $33.98
-                                </p>
-                            </div>
-
-                            <div>
-                                <p class="label">
-                                    Live Upside
-                                </p>
-
-                                <p
-                                    class="metric positive"
-                                    id="inva-live-upside"
-                                >
-                                    Loading...
+                                <p class="metric positive">
+                                    +51.09%
                                 </p>
                             </div>
                         </div>
 
-                        <div class="card-footer">
-                            <span>
-                                Published June 18, 2026
-                            </span>
+                        <div class="card-actions">
+                            <a
+                                class="primary-button"
+                                href="reports/innoviva.html"
+                            >
+                                View Full Report
+                            </a>
 
-                            <span class="view-report">
-                                View Report →
-                            </span>
+                            <a
+                                class="secondary-button"
+                                href="pdfs/Innoviva_Report.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Open PDF
+                            </a>
                         </div>
-                    </a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- About section -->
-        <section id="about" class="about-section">
-            <div class="container about-grid">
+        <section
+            id="methodology"
+            class="methodology-section"
+        >
+            <div class="container methodology-grid">
                 <div>
-                    <p class="eyebrow">
-                        About This Portfolio
-                    </p>
+                    <p class="eyebrow">Research Methodology</p>
 
                     <h2>
-                        Research grounded in valuation and strategy
+                        Fundamental analysis supported by valuation
                     </h2>
                 </div>
 
-                <div class="about-copy">
-                    <p>
-                        This portfolio presents independent educational
-                        research on publicly traded companies across
-                        different sectors.
-                    </p>
-
+                <div class="methodology-copy">
                     <p>
                         Each report evaluates company fundamentals,
                         competitive positioning, industry trends,
-                        investment catalysts, valuation, and key risks.
+                        catalysts, financial performance, valuation,
+                        and company-specific risks.
                     </p>
 
                     <p>
-                        Research methods may include discounted cash flow
-                        analysis, comparable-company analysis, scenario
-                        analysis, sensitivity analysis, and
+                        Valuation methods may include discounted cash flow,
+                        comparable-company analysis, earnings multiples,
+                        scenario analysis, sensitivity analysis, and
                         probability-weighted valuation.
                     </p>
                 </div>
@@ -371,17 +362,11 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer id="contact" class="site-footer">
         <div class="container footer-content">
             <div>
-                <p class="footer-title">
-                    Stock Portfolio
-                </p>
-
-                <p>
-                    Independent Equity Research
-                </p>
+                <p class="footer-title">Stock Portfolio</p>
+                <p>Independent Equity Research</p>
             </div>
 
             <div class="footer-links">
@@ -411,958 +396,12 @@
             <p>
                 Disclaimer: This portfolio contains independent educational
                 research and does not constitute investment advice or a
-                recommendation to buy or sell any security. Prices,
-                estimates, and recommendations reflect information
-                available as of each report's publication date. Live market
-                prices may be delayed or temporarily unavailable.
+                recommendation to buy or sell any security. Target prices,
+                recommendations, and estimates reflect information
+                available as of each report’s publication date. Current
+                market data is supplied by TradingView and may be delayed.
             </p>
         </div>
     </footer>
-
-    <!-- Live stock-price script -->
-    <script>
-        const FINNHUB_API_KEY =
-            "d9fs739r01qggl8lhr2gd9fs739r01qggl8lhr30"
-   Basic reset
-========================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #f5f7fa;
-    color: #172033;
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(1120px, calc(100% - 40px));
-    margin: 0 auto;
-}
-
-/* =========================
-   Navigation
-========================= */
-
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid #e4e8ef;
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(12px);
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 68px;
-}
-
-.brand {
-    color: #10254c;
-    font-size: 1.1rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-.nav-links {
-    display: flex;
-    gap: 28px;
-}
-
-.nav-links a {
-    color: #536078;
-    font-size: 0.93rem;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: #1769e0;
-}
-
-/* =========================
-   Hero
-========================= */
-
-.hero {
-    padding: 96px 0 72px;
-    background:
-        radial-gradient(
-            circle at top right,
-            rgba(39, 111, 232, 0.16),
-            transparent 34%
-        ),
-        linear-gradient(
-            135deg,
-            #081a3a,
-            #102d5e
-        );
-    color: white;
-}
-
-.hero-content {
-    max-width: 900px;
-}
-
-.eyebrow {
-    margin-bottom: 12px;
-    color: #2f7ae5;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-}
-
-.hero .eyebrow {
-    color: #8dbbff;
-}
-
-.hero h1 {
-    margin-bottom: 18px;
-    font-size: clamp(
-        3rem,
-        7vw,
-        5.5rem
-    );
-    line-height: 1;
-    letter-spacing: -0.055em;
-}
-
-.hero-description {
-    max-width: 760px;
-    color: #d6e2f5;
-    font-size: 1.2rem;
-}
-
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 30px;
-}
-
-.hero-tags span {
-    border: 1px solid
-        rgba(255, 255, 255, 0.24);
-    border-radius: 999px;
-    padding: 8px 14px;
-    background:
-        rgba(255, 255, 255, 0.08);
-    color: #e7effc;
-    font-size: 0.84rem;
-}
-
-/* =========================
-   Statistics
-========================= */
-
-.statistics {
-    position: relative;
-    margin-top: -28px;
-}
-
-.statistics-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(4, 1fr);
-    overflow: hidden;
-    border: 1px solid #e3e8f0;
-    border-radius: 14px;
-    background: white;
-    box-shadow:
-        0 14px 45px
-        rgba(20, 37, 68, 0.1);
-}
-
-.stat-card {
-    padding: 28px;
-    border-right:
-        1px solid #e8ecf2;
-}
-
-.stat-card:last-child {
-    border-right: none;
-}
-
-.stat-number {
-    color: #10254c;
-    font-size: 1.65rem;
-    font-weight: 800;
-}
-
-.stat-label {
-    margin-top: 3px;
-    color: #6c778c;
-    font-size: 0.83rem;
-}
-
-/* =========================
-   Coverage dashboard
-========================= */
-
-.coverage-section {
-    padding: 92px 0;
-}
-
-.section-heading {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 32px;
-    margin-bottom: 35px;
-}
-
-.section-heading h2,
-.about-section h2 {
-    color: #10254c;
-    font-size: clamp(
-        2rem,
-        4vw,
-        3rem
-    );
-    line-height: 1.1;
-    letter-spacing: -0.04em;
-}
-
-.section-heading-copy {
-    max-width: 500px;
-}
-
-.section-description {
-    color: #68748a;
-}
-
-.market-update {
-    margin-top: 8px;
-    color: #8a94a6;
-    font-size: 0.75rem;
-}
-
-.research-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(2, 1fr);
-    gap: 24px;
-}
-
-.research-card {
-    display: flex;
-    flex-direction: column;
-    min-height: 450px;
-    overflow: hidden;
-    border: 1px solid #dfe5ed;
-    border-radius: 16px;
-    padding: 28px;
-    background: white;
-    box-shadow:
-        0 8px 28px
-        rgba(18, 40, 77, 0.06);
-    transition:
-        transform 180ms ease,
-        box-shadow 180ms ease,
-        border-color 180ms ease;
-}
-
-.research-card:hover {
-    transform: translateY(-5px);
-    border-color: #9bbcea;
-    box-shadow:
-        0 18px 46px
-        rgba(18, 40, 77, 0.12);
-}
-
-.card-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.company-identity {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.ticker-box {
-    display: grid;
-    width: 58px;
-    height: 58px;
-    flex-shrink: 0;
-    place-items: center;
-    border-radius: 12px;
-    background: #102c5c;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 800;
-}
-
-.company-name {
-    color: #17233a;
-    font-size: 1.05rem;
-    font-weight: 750;
-}
-
-.company-sector {
-    margin-top: 3px;
-    color: #7a8496;
-    font-size: 0.78rem;
-}
-
-.rating {
-    border-radius: 999px;
-    padding: 6px 11px;
-    font-size: 0.72rem;
-    font-weight: 850;
-    letter-spacing: 0.06em;
-}
-
-.buy {
-    background: #e2f8ed;
-    color: #13764a;
-}
-
-.hold {
-    background: #fff3d2;
-    color: #8a6300;
-}
-
-.sell {
-    background: #ffe5e4;
-    color: #a02924;
-}
-
-.card-thesis {
-    flex: 1;
-    margin-top: 32px;
-}
-
-.card-thesis p:last-child {
-    margin-top: 8px;
-    color: #4f5d73;
-}
-
-.label {
-    color: #8a94a6;
-    font-size: 0.7rem;
-    font-weight: 750;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-}
-
-.valuation-grid {
-    display: grid;
-    gap: 18px;
-    margin-top: 28px;
-    padding: 22px 0;
-    border-top:
-        1px solid #edf0f4;
-    border-bottom:
-        1px solid #edf0f4;
-}
-
-.valuation-grid-four {
-    grid-template-columns:
-        repeat(4, 1fr);
-}
-
-.metric {
-    margin-top: 5px;
-    color: #1a2945;
-    font-size: 1.08rem;
-    font-weight: 800;
-}
-
-.positive {
-    color: #148554;
-}
-
-.negative {
-    color: #b33a35;
-}
-
-.live-change {
-    min-height: 20px;
-    margin-top: 3px;
-    font-size: 0.72rem;
-    font-weight: 700;
-}
-
-.positive-change {
-    color: #148554;
-}
-
-.negative-change {
-    color: #b33a35;
-}
-
-.card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-    color: #8a94a6;
-    font-size: 0.78rem;
-}
-
-.view-report {
-    color: #1769e0;
-    font-weight: 750;
-}
-
-/* =========================
-   About section
-========================= */
-
-.about-section {
-    padding: 82px 0;
-    background: white;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns:
-        0.9fr 1.1fr;
-    gap: 80px;
-}
-
-.about-copy {
-    color: #5b687d;
-    font-size: 1.05rem;
-}
-
-.about-copy p + p {
-    margin-top: 20px;
-}
-
-/* =========================
-   Footer
-========================= */
-
-.site-footer {
-    padding: 55px 0 28px;
-    background: #081a3a;
-    color: #cbd8ec;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.footer-title {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 800;
-}
-
-.footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.disclaimer {
-    margin-top: 40px;
-    padding-top: 22px;
-    border-top:
-        1px solid
-        rgba(255, 255, 255, 0.12);
-    color: #8fa0ba;
-    font-size: 0.74rem;
-}
-
-/* =========================
-   Company report pages
-========================= */
-
-.report-hero {
-    padding: 80px 0 60px;
-    background:
-        linear-gradient(
-            135deg,
-            #081a3a,
-            #12336a
-        );
-    color: white;
-}
-
-.back-link {
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #a9c9fa;
-    font-weight: 650;
-}
-
-.report-company-line {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.report-hero h1 {
-    margin-top: 14px;
-    font-size: clamp(
-        2.4rem,
-        6vw,
-        4.5rem
-    );
-    line-height: 1.05;
-    letter-spacing: -0.05em;
-}
-
-.report-subtitle {
-    margin-top: 14px;
-    color: #c7d6ed;
-    font-size: 1.05rem;
-}
-
-.report-summary {
-    position: relative;
-    margin-top: -30px;
-}
-
-.summary-panel {
-    display: grid;
-    grid-template-columns:
-        repeat(4, 1fr);
-    overflow: hidden;
-    border: 1px solid #dfe5ed;
-    border-radius: 14px;
-    background: white;
-    box-shadow:
-        0 15px 50px
-        rgba(18, 40, 77, 0.12);
-}
-
-.summary-item {
-    padding: 25px;
-    border-right:
-        1px solid #e8ecf1;
-}
-
-.summary-item:last-child {
-    border-right: none;
-}
-
-.report-content {
-    padding: 80px 0;
-}
-
-.report-layout {
-    display: grid;
-    grid-template-columns:
-        minmax(0, 1.8fr)
-        minmax(260px, 0.7fr);
-    gap: 42px;
-}
-
-.report-section {
-    margin-bottom: 42px;
-}
-
-.report-section h2 {
-    margin-bottom: 15px;
-    color: #10254c;
-    font-size: 1.55rem;
-}
-
-.report-section p {
-    color: #58667b;
-}
-
-.report-section ul {
-    padding-left: 20px;
-    color: #58667b;
-}
-
-.report-section li + li {
-    margin-top: 11px;
-}
-
-.sidebar-card {
-    margin-bottom: 20px;
-    border:
-        1px solid #e0e5ed;
-    border-radius: 14px;
-    padding: 24px;
-    background: white;
-}
-
-.sidebar-card h3 {
-    margin-bottom: 14px;
-    color: #10254c;
-}
-
-.sidebar-card p,
-.sidebar-card li {
-    color: #647187;
-    font-size: 0.9rem;
-}
-
-.sidebar-card ul {
-    padding-left: 18px;
-}
-
-.sidebar-card li + li {
-    margin-top: 8px;
-}
-
-.pdf-section {
-    margin-top: 18px;
-    padding: 70px 0;
-    background: #edf2f8;
-}
-
-.pdf-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 24px;
-}
-
-.pdf-heading h2 {
-    color: #10254c;
-}
-
-.download-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    padding: 11px 18px;
-    background: #1769e0;
-    color: white;
-    font-weight: 750;
-}
-
-.download-button:hover {
-    background: #1058bf;
-}
-
-.pdf-frame {
-    width: 100%;
-    height: 900px;
-    border:
-        1px solid #d6dde8;
-    border-radius: 12px;
-    background: white;
-}
-
-/* =========================
-   Tablet responsiveness
-========================= */
-
-@media (max-width: 1050px) {
-    .valuation-grid-four {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 850px) {
-    .statistics-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .stat-card:nth-child(2) {
-        border-right: none;
-    }
-
-    .stat-card:nth-child(-n + 2) {
-        border-bottom:
-            1px solid #e8ecf2;
-    }
-
-    .research-grid,
-    .about-grid,
-    .report-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .summary-panel {
-        grid-template-columns:
-            repeat(2, 1fr);
-    }
-
-    .summary-item:nth-child(2) {
-        border-right: none;
-    }
-
-    .summary-item:nth-child(-n + 2) {
-        border-bottom:
-            1px solid #e8ecf1;
-    }
-}
-
-/* =========================
-   Mobile responsiveness
-========================= */
-
-@media (max-width: 600px) {
-    .container {
-        width:
-            min(
-                100% - 26px,
-                1120px
-            );
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 75px 0 60px;
-    }
-
-    .statistics-grid,
-    .summary-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .stat-card,
-    .summary-item {
-        border-right: none;
-        border-bottom:
-            1px solid #e8ecf1;
-    }
-
-    .stat-card:last-child,
-    .summary-item:last-child {
-        border-bottom: none;
-    }
-
-    .valuation-grid-four {
-        grid-template-columns: 1fr;
-    }
-
-    .research-card {
-        padding: 22px;
-    }
-
-    .card-top,
-    .footer-content,
-    .pdf-heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .pdf-frame {
-        height: 620px;
-    }
-}";
-
-        const stocks = [
-            {
-                symbol: "AMG",
-                targetPrice: 465.77,
-                priceElement: "amg-live-price",
-                changeElement: "amg-live-change",
-                upsideElement: "amg-live-upside"
-            },
-            {
-                symbol: "INVA",
-                targetPrice: 33.98,
-                priceElement: "inva-live-price",
-                changeElement: "inva-live-change",
-                upsideElement: "inva-live-upside"
-            }
-        ];
-
-        function formatPrice(value) {
-            return `$${Number(value).toFixed(2)}`;
-        }
-
-        function formatPercentage(value) {
-            const sign = value >= 0 ? "+" : "";
-            return `${sign}${Number(value).toFixed(2)}%`;
-        }
-
-        function setLoadingError(stock) {
-            const priceElement =
-                document.getElementById(stock.priceElement);
-
-            const changeElement =
-                document.getElementById(stock.changeElement);
-
-            const upsideElement =
-                document.getElementById(stock.upsideElement);
-
-            priceElement.textContent = "Unavailable";
-            changeElement.textContent = "";
-            upsideElement.textContent = "Unavailable";
-        }
-
-        async function loadStockQuote(stock) {
-            const priceElement =
-                document.getElementById(stock.priceElement);
-
-            const changeElement =
-                document.getElementById(stock.changeElement);
-
-            const upsideElement =
-                document.getElementById(stock.upsideElement);
-
-            try {
-                if (
-                    !FINNHUB_API_KEY ||
-                    FINNHUB_API_KEY ===
-                    "PASTE_YOUR_FINNHUB_API_KEY_HERE"
-                ) {
-                    throw new Error(
-                        "Finnhub API key has not been added."
-                    );
-                }
-
-                const endpoint =
-                    "https://finnhub.io/api/v1/quote" +
-                    `?symbol=${encodeURIComponent(stock.symbol)}` +
-                    `&token=${encodeURIComponent(FINNHUB_API_KEY)}`;
-
-                const response = await fetch(endpoint);
-
-                if (!response.ok) {
-                    throw new Error(
-                        `Request failed with status ${response.status}`
-                    );
-                }
-
-                const quote = await response.json();
-
-                const currentPrice = Number(quote.c);
-                const dailyChangePercent = Number(quote.dp);
-
-                if (
-                    !Number.isFinite(currentPrice) ||
-                    currentPrice <= 0
-                ) {
-                    throw new Error(
-                        "No valid current price was returned."
-                    );
-                }
-
-                const liveUpside =
-                    (
-                        stock.targetPrice /
-                        currentPrice -
-                        1
-                    ) * 100;
-
-                priceElement.textContent =
-                    formatPrice(currentPrice);
-
-                if (
-                    Number.isFinite(dailyChangePercent)
-                ) {
-                    changeElement.textContent =
-                        `${formatPercentage(
-                            dailyChangePercent
-                        )} today`;
-
-                    changeElement.classList.remove(
-                        "positive-change",
-                        "negative-change"
-                    );
-
-                    if (dailyChangePercent >= 0) {
-                        changeElement.classList.add(
-                            "positive-change"
-                        );
-                    } else {
-                        changeElement.classList.add(
-                            "negative-change"
-                        );
-                    }
-                } else {
-                    changeElement.textContent = "";
-                }
-
-                upsideElement.textContent =
-                    formatPercentage(liveUpside);
-
-                upsideElement.classList.remove(
-                    "positive",
-                    "negative"
-                );
-
-                if (liveUpside >= 0) {
-                    upsideElement.classList.add(
-                        "positive"
-                    );
-                } else {
-                    upsideElement.classList.add(
-                        "negative"
-                    );
-                }
-            } catch (error) {
-                console.error(
-                    `Unable to load ${stock.symbol}:`,
-                    error
-                );
-
-                setLoadingError(stock);
-            }
-        }
-
-        async function loadAllQuotes() {
-            const updateTimeElement =
-                document.getElementById(
-                    "market-update-time"
-                );
-
-            await Promise.all(
-                stocks.map(
-                    (stock) => loadStockQuote(stock)
-                )
-            );
-
-            if (updateTimeElement) {
-                updateTimeElement.textContent =
-                    "Market data refreshed: " +
-                    new Date().toLocaleString();
-            }
-        }
-
-        loadAllQuotes();
-
-        // Refresh every five minutes while the page is open.
-        setInterval(
-            loadAllQuotes,
-            5 * 60 * 1000
-        );
-    </script>
 </body>
 </html>
