@@ -10,10 +10,10 @@
 
     <meta
         name="description"
-        content="Khanh Pham's equity research and finance portfolio."
+        content="Stock portfolio featuring independent equity research, valuation, and investment analysis."
     >
 
-    <title>Khanh Pham | Equity Research Portfolio</title>
+    <title>Stock Portfolio | Equity Research</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -22,7 +22,7 @@
     <header class="site-header">
         <nav class="navbar container">
             <a class="brand" href="index.html">
-                KP Research
+                Stock Portfolio
             </a>
 
             <div class="nav-links">
@@ -34,16 +34,21 @@
     </header>
 
     <main>
+        <!-- Hero section -->
         <section class="hero">
             <div class="container hero-content">
-                <p class="eyebrow">Equity Research Portfolio</p>
+                <p class="eyebrow">
+                    Independent Equity Research
+                </p>
 
-                <h1>Khanh Pham</h1>
+                <h1>
+                    Stock Portfolio
+                </h1>
 
                 <p class="hero-description">
-                    Economics student at the University of North Carolina
-                    at Chapel Hill with experience in equity research,
-                    financial modeling, valuation, and investment analysis.
+                    A collection of public-company research reports,
+                    financial models, valuation analyses, investment
+                    theses, catalysts, and risks.
                 </p>
 
                 <div class="hero-tags">
@@ -55,52 +60,80 @@
             </div>
         </section>
 
+        <!-- Portfolio statistics -->
         <section class="statistics">
             <div class="container statistics-grid">
                 <div class="stat-card">
                     <p class="stat-number">2</p>
-                    <p class="stat-label">Companies Covered</p>
+                    <p class="stat-label">
+                        Companies Covered
+                    </p>
                 </div>
 
                 <div class="stat-card">
                     <p class="stat-number">2</p>
-                    <p class="stat-label">Sectors Covered</p>
+                    <p class="stat-label">
+                        Sectors Covered
+                    </p>
                 </div>
 
                 <div class="stat-card">
                     <p class="stat-number">+58%</p>
-                    <p class="stat-label">Highest Expected Upside</p>
+                    <p class="stat-label">
+                        Highest Initial Upside
+                    </p>
                 </div>
 
                 <div class="stat-card">
-                    <p class="stat-number">BUY</p>
-                    <p class="stat-label">Current Recommendations</p>
+                    <p class="stat-number">2</p>
+                    <p class="stat-label">
+                        Long Recommendations
+                    </p>
                 </div>
             </div>
         </section>
 
+        <!-- Research dashboard -->
         <section id="coverage" class="coverage-section">
             <div class="container">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Coverage Universe</p>
-                        <h2>Equity Research</h2>
+                        <p class="eyebrow">
+                            Coverage Universe
+                        </p>
+
+                        <h2>
+                            Equity Research
+                        </h2>
                     </div>
 
-                    <p class="section-description">
-                        Select a company to view the investment thesis,
-                        valuation summary, risks, and full report.
-                    </p>
+                    <div class="section-heading-copy">
+                        <p class="section-description">
+                            Select a company to view the investment thesis,
+                            valuation summary, key risks, and full report.
+                        </p>
+
+                        <p
+                            class="market-update"
+                            id="market-update-time"
+                        >
+                            Loading market data...
+                        </p>
+                    </div>
                 </div>
 
                 <div class="research-grid">
+                    <!-- AMG card -->
                     <a
                         class="research-card"
                         href="reports/amg.html"
+                        aria-label="View Affiliated Managers Group report"
                     >
                         <div class="card-top">
                             <div class="company-identity">
-                                <div class="ticker-box">AMG</div>
+                                <div class="ticker-box">
+                                    AMG
+                                </div>
 
                                 <div>
                                     <p class="company-name">
@@ -113,51 +146,98 @@
                                 </div>
                             </div>
 
-                            <span class="rating buy">BUY</span>
+                            <span class="rating buy">
+                                LONG
+                            </span>
                         </div>
 
                         <div class="card-thesis">
-                            <p class="label">Investment View</p>
+                            <p class="label">
+                                Investment View
+                            </p>
 
                             <p>
-                                Diversified affiliate exposure, alternative
-                                asset growth, and attractive valuation support
-                                meaningful long-term upside.
+                                AMG's affiliate structure, expansion in
+                                alternative assets, and diversified earnings
+                                base support a favorable long-term outlook.
                             </p>
                         </div>
 
-                        <div class="valuation-grid">
+                        <div class="valuation-grid valuation-grid-four">
                             <div>
-                                <p class="label">Pitched Price</p>
-                                <p class="metric">$293.91</p>
+                                <p class="label">
+                                    Pitched Price
+                                </p>
+
+                                <p class="metric">
+                                    $293.91
+                                </p>
                             </div>
 
                             <div>
-                                <p class="label">Target Price</p>
-                                <p class="metric">$465.77</p>
+                                <p class="label">
+                                    Live Price
+                                </p>
+
+                                <p
+                                    class="metric"
+                                    id="amg-live-price"
+                                >
+                                    Loading...
+                                </p>
+
+                                <p
+                                    class="live-change"
+                                    id="amg-live-change"
+                                ></p>
                             </div>
 
                             <div>
-                                <p class="label">Expected Upside</p>
-                                <p class="metric positive">+58.0%</p>
+                                <p class="label">
+                                    Target Price
+                                </p>
+
+                                <p class="metric">
+                                    $465.77
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="label">
+                                    Live Upside
+                                </p>
+
+                                <p
+                                    class="metric positive"
+                                    id="amg-live-upside"
+                                >
+                                    Loading...
+                                </p>
                             </div>
                         </div>
 
                         <div class="card-footer">
-                            <span>Published May 15, 2026</span>
+                            <span>
+                                Published May 15, 2026
+                            </span>
+
                             <span class="view-report">
                                 View Report →
                             </span>
                         </div>
                     </a>
 
+                    <!-- Innoviva card -->
                     <a
                         class="research-card"
                         href="reports/innoviva.html"
+                        aria-label="View Innoviva report"
                     >
                         <div class="card-top">
                             <div class="company-identity">
-                                <div class="ticker-box">INVA</div>
+                                <div class="ticker-box">
+                                    INVA
+                                </div>
 
                                 <div>
                                     <p class="company-name">
@@ -170,38 +250,81 @@
                                 </div>
                             </div>
 
-                            <span class="rating buy">BUY</span>
+                            <span class="rating buy">
+                                LONG
+                            </span>
                         </div>
 
                         <div class="card-thesis">
-                            <p class="label">Investment View</p>
+                            <p class="label">
+                                Investment View
+                            </p>
 
                             <p>
-                                Royalty income, infectious-disease products,
-                                international expansion, and healthcare assets
-                                create an attractive risk-reward profile.
+                                Innoviva combines recurring royalty income,
+                                infectious-disease growth, international
+                                expansion, and strategic healthcare assets.
                             </p>
                         </div>
 
-                        <div class="valuation-grid">
+                        <div class="valuation-grid valuation-grid-four">
                             <div>
-                                <p class="label">Pitched Price</p>
-                                <p class="metric">$22.49</p>
+                                <p class="label">
+                                    Pitched Price
+                                </p>
+
+                                <p class="metric">
+                                    $22.49
+                                </p>
                             </div>
 
                             <div>
-                                <p class="label">Target Price</p>
-                                <p class="metric">$33.98</p>
+                                <p class="label">
+                                    Live Price
+                                </p>
+
+                                <p
+                                    class="metric"
+                                    id="inva-live-price"
+                                >
+                                    Loading...
+                                </p>
+
+                                <p
+                                    class="live-change"
+                                    id="inva-live-change"
+                                ></p>
                             </div>
 
                             <div>
-                                <p class="label">Expected Upside</p>
-                                <p class="metric positive">+51.09%</p>
+                                <p class="label">
+                                    Target Price
+                                </p>
+
+                                <p class="metric">
+                                    $33.98
+                                </p>
+                            </div>
+
+                            <div>
+                                <p class="label">
+                                    Live Upside
+                                </p>
+
+                                <p
+                                    class="metric positive"
+                                    id="inva-live-upside"
+                                >
+                                    Loading...
+                                </p>
                             </div>
                         </div>
 
                         <div class="card-footer">
-                            <span>Published June 18, 2026</span>
+                            <span>
+                                Published June 18, 2026
+                            </span>
+
                             <span class="view-report">
                                 View Report →
                             </span>
@@ -211,41 +334,54 @@
             </div>
         </section>
 
+        <!-- About section -->
         <section id="about" class="about-section">
             <div class="container about-grid">
                 <div>
-                    <p class="eyebrow">About the Analyst</p>
-                    <h2>Research grounded in valuation and strategy</h2>
+                    <p class="eyebrow">
+                        About This Portfolio
+                    </p>
+
+                    <h2>
+                        Research grounded in valuation and strategy
+                    </h2>
                 </div>
 
                 <div class="about-copy">
                     <p>
-                        I am an Economics student at the University of North
-                        Carolina at Chapel Hill with experience in equity
-                        research, company valuation, and financial modeling.
+                        This portfolio presents independent educational
+                        research on publicly traded companies across
+                        different sectors.
                     </p>
 
                     <p>
-                        My research evaluates financial performance,
-                        competitive positioning, industry trends, catalysts,
-                        valuation, and risks.
+                        Each report evaluates company fundamentals,
+                        competitive positioning, industry trends,
+                        investment catalysts, valuation, and key risks.
                     </p>
 
                     <p>
-                        I use discounted cash flow analysis, comparable-company
-                        analysis, scenario analysis, and probability-weighted
-                        valuation to develop investment views.
+                        Research methods may include discounted cash flow
+                        analysis, comparable-company analysis, scenario
+                        analysis, sensitivity analysis, and
+                        probability-weighted valuation.
                     </p>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer id="contact" class="site-footer">
         <div class="container footer-content">
             <div>
-                <p class="footer-title">Khanh Pham</p>
-                <p>Equity Research Portfolio</p>
+                <p class="footer-title">
+                    Stock Portfolio
+                </p>
+
+                <p>
+                    Independent Equity Research
+                </p>
             </div>
 
             <div class="footer-links">
@@ -275,11 +411,197 @@
             <p>
                 Disclaimer: This portfolio contains independent educational
                 research and does not constitute investment advice or a
-                recommendation to buy or sell any security. Prices, estimates,
-                and recommendations reflect information available as of each
-                report's publication date.
+                recommendation to buy or sell any security. Prices,
+                estimates, and recommendations reflect information
+                available as of each report's publication date. Live market
+                prices may be delayed or temporarily unavailable.
             </p>
         </div>
     </footer>
+
+    <!-- Live stock-price script -->
+    <script>
+        const FINNHUB_API_KEY =
+            "PASTE_YOUR_FINNHUB_API_KEY_HERE";
+
+        const stocks = [
+            {
+                symbol: "AMG",
+                targetPrice: 465.77,
+                priceElement: "amg-live-price",
+                changeElement: "amg-live-change",
+                upsideElement: "amg-live-upside"
+            },
+            {
+                symbol: "INVA",
+                targetPrice: 33.98,
+                priceElement: "inva-live-price",
+                changeElement: "inva-live-change",
+                upsideElement: "inva-live-upside"
+            }
+        ];
+
+        function formatPrice(value) {
+            return `$${Number(value).toFixed(2)}`;
+        }
+
+        function formatPercentage(value) {
+            const sign = value >= 0 ? "+" : "";
+            return `${sign}${Number(value).toFixed(2)}%`;
+        }
+
+        function setLoadingError(stock) {
+            const priceElement =
+                document.getElementById(stock.priceElement);
+
+            const changeElement =
+                document.getElementById(stock.changeElement);
+
+            const upsideElement =
+                document.getElementById(stock.upsideElement);
+
+            priceElement.textContent = "Unavailable";
+            changeElement.textContent = "";
+            upsideElement.textContent = "Unavailable";
+        }
+
+        async function loadStockQuote(stock) {
+            const priceElement =
+                document.getElementById(stock.priceElement);
+
+            const changeElement =
+                document.getElementById(stock.changeElement);
+
+            const upsideElement =
+                document.getElementById(stock.upsideElement);
+
+            try {
+                if (
+                    !FINNHUB_API_KEY ||
+                    FINNHUB_API_KEY ===
+                    "PASTE_YOUR_FINNHUB_API_KEY_HERE"
+                ) {
+                    throw new Error(
+                        "Finnhub API key has not been added."
+                    );
+                }
+
+                const endpoint =
+                    "https://finnhub.io/api/v1/quote" +
+                    `?symbol=${encodeURIComponent(stock.symbol)}` +
+                    `&token=${encodeURIComponent(FINNHUB_API_KEY)}`;
+
+                const response = await fetch(endpoint);
+
+                if (!response.ok) {
+                    throw new Error(
+                        `Request failed with status ${response.status}`
+                    );
+                }
+
+                const quote = await response.json();
+
+                const currentPrice = Number(quote.c);
+                const dailyChangePercent = Number(quote.dp);
+
+                if (
+                    !Number.isFinite(currentPrice) ||
+                    currentPrice <= 0
+                ) {
+                    throw new Error(
+                        "No valid current price was returned."
+                    );
+                }
+
+                const liveUpside =
+                    (
+                        stock.targetPrice /
+                        currentPrice -
+                        1
+                    ) * 100;
+
+                priceElement.textContent =
+                    formatPrice(currentPrice);
+
+                if (
+                    Number.isFinite(dailyChangePercent)
+                ) {
+                    changeElement.textContent =
+                        `${formatPercentage(
+                            dailyChangePercent
+                        )} today`;
+
+                    changeElement.classList.remove(
+                        "positive-change",
+                        "negative-change"
+                    );
+
+                    if (dailyChangePercent >= 0) {
+                        changeElement.classList.add(
+                            "positive-change"
+                        );
+                    } else {
+                        changeElement.classList.add(
+                            "negative-change"
+                        );
+                    }
+                } else {
+                    changeElement.textContent = "";
+                }
+
+                upsideElement.textContent =
+                    formatPercentage(liveUpside);
+
+                upsideElement.classList.remove(
+                    "positive",
+                    "negative"
+                );
+
+                if (liveUpside >= 0) {
+                    upsideElement.classList.add(
+                        "positive"
+                    );
+                } else {
+                    upsideElement.classList.add(
+                        "negative"
+                    );
+                }
+            } catch (error) {
+                console.error(
+                    `Unable to load ${stock.symbol}:`,
+                    error
+                );
+
+                setLoadingError(stock);
+            }
+        }
+
+        async function loadAllQuotes() {
+            const updateTimeElement =
+                document.getElementById(
+                    "market-update-time"
+                );
+
+            await Promise.all(
+                stocks.map(
+                    (stock) => loadStockQuote(stock)
+                )
+            );
+
+            if (updateTimeElement) {
+                updateTimeElement.textContent =
+                    "Market data refreshed: " +
+                    new Date().toLocaleString();
+            }
+        }
+
+        loadAllQuotes();
+
+        // Refresh every five minutes while the page is open.
+        setInterval(
+            loadAllQuotes,
+            5 * 60 * 1000
+        );
+    </script>
 </body>
 </html>
