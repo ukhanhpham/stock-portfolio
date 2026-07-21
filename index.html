@@ -10,14 +10,16 @@
 
     <meta
         name="description"
-        content="Independent equity research portfolio featuring recommendations, valuation, and full research reports."
+        content="Independent equity research portfolio featuring stock recommendations, valuations, current market prices, and full research reports."
     >
 
     <title>Stock Portfolio | Equity Research</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link
+        rel="stylesheet"
+        href="/stock-portfolio/styles.css?v=5"
+    >
 
-    <!-- TradingView ticker component -->
     <script
         type="module"
         src="https://widgets.tradingview-widget.com/w/en/tv-tickers.js"
@@ -27,14 +29,25 @@
 <body>
     <header class="site-header">
         <nav class="navbar container">
-            <a class="brand" href="index.html">
+            <a
+                class="brand"
+                href="/stock-portfolio/"
+            >
                 Stock Portfolio
             </a>
 
             <div class="nav-links">
-                <a href="#coverage">Research</a>
-                <a href="#methodology">Methodology</a>
-                <a href="#contact">Contact</a>
+                <a href="#coverage">
+                    Research
+                </a>
+
+                <a href="#methodology">
+                    Methodology
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
             </div>
         </nav>
     </header>
@@ -46,12 +59,14 @@
                     Independent Equity Research
                 </p>
 
-                <h1>Stock Portfolio</h1>
+                <h1>
+                    Stock Portfolio
+                </h1>
 
                 <p class="hero-description">
-                    Public-company research featuring recommendations,
-                    financial modeling, valuation, catalysts, risks,
-                    and complete equity research reports.
+                    Public-company research featuring financial modeling,
+                    valuation, investment theses, catalysts, risks, and
+                    complete equity research reports.
                 </p>
 
                 <div class="hero-tags">
@@ -63,50 +78,36 @@
             </div>
         </section>
 
-        <section class="statistics">
-            <div class="container statistics-grid">
-                <div class="stat-card">
-                    <p class="stat-number">2</p>
-                    <p class="stat-label">Companies Covered</p>
-                </div>
-
-                <div class="stat-card">
-                    <p class="stat-number">2</p>
-                    <p class="stat-label">Sectors Covered</p>
-                </div>
-
-                <div class="stat-card">
-                    <p class="stat-number">2</p>
-                    <p class="stat-label">Buy Recommendations</p>
-                </div>
-
-                <div class="stat-card">
-                    <p class="stat-number">58%</p>
-                    <p class="stat-label">Highest Initial Upside</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="coverage" class="coverage-section">
+        <section
+            id="coverage"
+            class="coverage-section"
+        >
             <div class="container">
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">Coverage Universe</p>
-                        <h2>Equity Research</h2>
+                        <p class="eyebrow">
+                            Coverage Universe
+                        </p>
+
+                        <h2>
+                            Equity Research
+                        </h2>
                     </div>
 
                     <p class="section-description">
                         Select a company to view its investment thesis,
-                        recommendation, valuation, risks, and full report.
+                        valuation, risks, and full research report.
                     </p>
                 </div>
 
                 <div class="research-grid">
-                    <!-- AMG card -->
+                    <!-- AMG -->
                     <article class="research-card">
                         <div class="card-top">
                             <div class="company-identity">
-                                <div class="ticker-box">AMG</div>
+                                <div class="ticker-box">
+                                    AMG
+                                </div>
 
                                 <div>
                                     <p class="company-name">
@@ -119,11 +120,15 @@
                                 </div>
                             </div>
 
-                            <span class="rating buy">BUY</span>
+                            <span class="rating buy">
+                                BUY
+                            </span>
                         </div>
 
                         <div class="live-widget-section">
-                            <p class="label">Current Market Price</p>
+                            <p class="label">
+                                Current Market Price
+                            </p>
 
                             <div class="tradingview-box">
                                 <tv-tickers
@@ -134,36 +139,12 @@
                                     color-theme="light"
                                 ></tv-tickers>
                             </div>
-
-                            <p class="market-note">
-                                Market data supplied by TradingView and may
-                                be delayed.
-                            </p>
-                        </div>
-
-                        <div class="recommendation-row">
-                            <div>
-                                <p class="label">Recommendation</p>
-                                <p class="recommendation-value">BUY</p>
-                            </div>
-
-                            <div>
-                                <p class="label">Report Date</p>
-                                <p class="recommendation-detail">
-                                    May 15, 2026
-                                </p>
-                            </div>
-
-                            <div>
-                                <p class="label">Time Horizon</p>
-                                <p class="recommendation-detail">
-                                    Long term
-                                </p>
-                            </div>
                         </div>
 
                         <div class="card-thesis">
-                            <p class="label">Investment Thesis</p>
+                            <p class="label">
+                                Investment Thesis
+                            </p>
 
                             <p>
                                 AMG’s affiliate structure, hidden growth in
@@ -176,18 +157,28 @@
 
                         <div class="valuation-grid">
                             <div class="valuation-item">
-                                <p class="label">Pitched Price</p>
-                                <p class="metric">$293.91</p>
-                            </div>
+                                <p class="label">
+                                    Pitched Price
+                                </p>
 
-                            <div class="valuation-item">
-                                <p class="label">Target Price</p>
-                                <p class="metric">$465.77</p>
+                                <p class="metric">
+                                    $293.91
+                                </p>
                             </div>
 
                             <div class="valuation-item">
                                 <p class="label">
-                                    Target Upside at Publication
+                                    5-Year Target Price
+                                </p>
+
+                                <p class="metric">
+                                    $465.77
+                                </p>
+                            </div>
+
+                            <div class="valuation-item">
+                                <p class="label">
+                                    Target Upside
                                 </p>
 
                                 <p class="metric positive">
@@ -199,14 +190,14 @@
                         <div class="card-actions">
                             <a
                                 class="primary-button"
-                                href="reports/amg.html"
+                                href="/stock-portfolio/reports/amg.html"
                             >
                                 View Full Report
                             </a>
 
                             <a
                                 class="secondary-button"
-                                href="pdfs/AMG_Stock_Pitch.pdf"
+                                href="/stock-portfolio/pdfs/AMG_Report.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -215,11 +206,13 @@
                         </div>
                     </article>
 
-                    <!-- Innoviva card -->
+                    <!-- Innoviva -->
                     <article class="research-card">
                         <div class="card-top">
                             <div class="company-identity">
-                                <div class="ticker-box">INVA</div>
+                                <div class="ticker-box">
+                                    INVA
+                                </div>
 
                                 <div>
                                     <p class="company-name">
@@ -232,11 +225,15 @@
                                 </div>
                             </div>
 
-                            <span class="rating buy">BUY</span>
+                            <span class="rating buy">
+                                BUY
+                            </span>
                         </div>
 
                         <div class="live-widget-section">
-                            <p class="label">Current Market Price</p>
+                            <p class="label">
+                                Current Market Price
+                            </p>
 
                             <div class="tradingview-box">
                                 <tv-tickers
@@ -247,36 +244,12 @@
                                     color-theme="light"
                                 ></tv-tickers>
                             </div>
-
-                            <p class="market-note">
-                                Market data supplied by TradingView and may
-                                be delayed.
-                            </p>
-                        </div>
-
-                        <div class="recommendation-row">
-                            <div>
-                                <p class="label">Recommendation</p>
-                                <p class="recommendation-value">BUY</p>
-                            </div>
-
-                            <div>
-                                <p class="label">Report Date</p>
-                                <p class="recommendation-detail">
-                                    June 18, 2026
-                                </p>
-                            </div>
-
-                            <div>
-                                <p class="label">Time Horizon</p>
-                                <p class="recommendation-detail">
-                                    3 years
-                                </p>
-                            </div>
                         </div>
 
                         <div class="card-thesis">
-                            <p class="label">Investment Thesis</p>
+                            <p class="label">
+                                Investment Thesis
+                            </p>
 
                             <p>
                                 Innoviva combines respiratory royalty income,
@@ -288,18 +261,28 @@
 
                         <div class="valuation-grid">
                             <div class="valuation-item">
-                                <p class="label">Pitched Price</p>
-                                <p class="metric">$22.49</p>
-                            </div>
+                                <p class="label">
+                                    Pitched Price
+                                </p>
 
-                            <div class="valuation-item">
-                                <p class="label">Target Price</p>
-                                <p class="metric">$33.98</p>
+                                <p class="metric">
+                                    $22.49
+                                </p>
                             </div>
 
                             <div class="valuation-item">
                                 <p class="label">
-                                    Target Upside at Publication
+                                    3-Year Target Price
+                                </p>
+
+                                <p class="metric">
+                                    $33.98
+                                </p>
+                            </div>
+
+                            <div class="valuation-item">
+                                <p class="label">
+                                    Target Upside
                                 </p>
 
                                 <p class="metric positive">
@@ -311,14 +294,14 @@
                         <div class="card-actions">
                             <a
                                 class="primary-button"
-                                href="reports/innoviva.html"
+                                href="/stock-portfolio/reports/innoviva.html"
                             >
                                 View Full Report
                             </a>
 
                             <a
                                 class="secondary-button"
-                                href="pdfs/Innoviva_Report.pdf"
+                                href="/stock-portfolio/pdfs/Innoviva_Report.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -336,7 +319,9 @@
         >
             <div class="container methodology-grid">
                 <div>
-                    <p class="eyebrow">Research Methodology</p>
+                    <p class="eyebrow">
+                        Research Methodology
+                    </p>
 
                     <h2>
                         Fundamental analysis supported by valuation
@@ -347,8 +332,8 @@
                     <p>
                         Each report evaluates company fundamentals,
                         competitive positioning, industry trends,
-                        catalysts, financial performance, valuation,
-                        and company-specific risks.
+                        financial performance, investment catalysts,
+                        valuation, and company-specific risks.
                     </p>
 
                     <p>
@@ -362,11 +347,19 @@
         </section>
     </main>
 
-    <footer id="contact" class="site-footer">
+    <footer
+        id="contact"
+        class="site-footer"
+    >
         <div class="container footer-content">
             <div>
-                <p class="footer-title">Stock Portfolio</p>
-                <p>Independent Equity Research</p>
+                <p class="footer-title">
+                    Stock Portfolio
+                </p>
+
+                <p>
+                    Independent Equity Research Reports
+                </p>
             </div>
 
             <div class="footer-links">
@@ -381,14 +374,6 @@
                 >
                     LinkedIn
                 </a>
-
-                <a
-                    href="https://github.com/ukhanhpham"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
             </div>
         </div>
 
@@ -397,9 +382,8 @@
                 Disclaimer: This portfolio contains independent educational
                 research and does not constitute investment advice or a
                 recommendation to buy or sell any security. Target prices,
-                recommendations, and estimates reflect information
-                available as of each report’s publication date. Current
-                market data is supplied by TradingView and may be delayed.
+                recommendations, and estimates reflect information available
+                as of each report’s publication date.
             </p>
         </div>
     </footer>
